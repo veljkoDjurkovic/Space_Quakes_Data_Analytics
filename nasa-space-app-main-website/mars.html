@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars 3D Model</title>
+    <link rel="stylesheet" href="styles_mars.css">
+    <script src="mars_js.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+    <div class="nasa-project-title">
+        <a href="home.html">
+        <div class="title-container">
+            <img src="images/logo11.png" alt="NASA Logo" class="logo">
+            <div>
+                <p>Mars Seismology <br>
+                    <div class="subtitle">Marsquake Analytics</div>
+                </p>
+            </div>
+        </div>
+        </a>
+    </div>
+
+    <div class="scroll-container" id="earthquake-list"></div>
+    <div id="map">
+        <model-viewer 
+    src="marsddd.glb" 
+    alt="A 3D model" 
+    auto-rotate 
+    camera-controls 
+    ar 
+    ar-modes="webxr scene-viewer quick-look"
+></model-viewer>
+    </div> 
+</body>
+</html>

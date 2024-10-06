@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    position: relative;
+    overflow-x: hidden; 
+}
+
+.data_image{
+
+    width: inherit;
+    padding-right: 70px;
+
+}
+
+.background {
+    width: 100vw;
+    height: 90vh;
+    margin-top: 10vh;
+    background-image: url("images/background1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid black;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    background-color: #000000;
+    padding: 2vh 3vw;
+    z-index: 1; 
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.nasa-project-title p {
+    font-family: century-gothic, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.4rem;
+    margin: 0;
+    padding: 0;
+}
+
+.subtitle {
+    font-family: century-gothic, sans-serif;
+    font-size: 1.6rem;
+}
+
+.items {
+    margin-top: 8vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    width: 60vw;
+    position: relative;
+    z-index: 1; 
+    text-align: center;
+}
+
+.item {
+    width: 50%;
+    background-color: rgba(34, 34, 34, 0.3); 
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+
+    margin: 5px 0;
+    font-family: century-gothic, sans-serif;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.item:hover {
+    background-color: #555;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 1.0);
+    color: white;
+    padding: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-top: 20px;
+    width: 60vw;
+    border-radius: 8px;
+    font-family: century-gothic, sans-serif;
+    font-size: 1.2rem;
+    text-align: left;
+    position: relative;
+    z-index: 1; 
+    margin-left: auto;
+    margin-right: auto;
+
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+
+
+#contact li{
+    
+    text-align: center;
+}
+
+#contact a{
+    text-decoration: none;
+    color: #d5b088; 
+}
+
+#contact ul{
+    list-style-type: none;
+    text-align: center;
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+
+
+    .background {
+        width: 100vw;
+        height: 90vh;
+        margin-top: 20vh;
+        background-image: url("images/background1.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .data_image{
+        padding-right: 10vw;
+    }
+
+    .title-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        width: 70px;
+        margin-bottom: 10px;
+    }
+
+    .nasa-project-title p {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .items {
+        margin-top: 10vh;
+        margin-left: 5vw;
+        text-align: center;
+        width: 90vw;
+        position: relative;
+        z-index: 1; 
+        text-align: center;
+    }
+    
+    .item {
+        width: 80vw;
+        margin: 5px 0;
+        font-size: 1.6rem;
+        background-color: rgba(34, 34, 34, 0.3); 
+        color: #fff;
+        border: none;
+        padding: 15px 20px;
+    
+        margin: 5px 0;
+        font-family: century-gothic, sans-serif;
+        font-size: 1.8rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-bottom: 10px;
+    }
+    
+
+    
+    .content {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 20px;
+        margin-top: 20px;
+        width: 90vw;
+        /* max-width: 800px; */
+        border-radius: 8px;
+        font-family: century-gothic, sans-serif;
+        font-size: 1rem;
+        text-align: left;
+        position: relative;
+        z-index: 1; 
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+
+
+
+
+
+}

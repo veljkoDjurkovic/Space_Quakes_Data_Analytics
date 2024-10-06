@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+a {
+    text-decoration: none; /* Removes underline */
+    color: inherit;        /* Inherits the text color from its parent element */
+}
+.title-container {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid black;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fbfbfb;
+    padding: 2vh 3vw;
+}
+
+.logo {
+    width: 100px; 
+    height: auto;
+    margin-right: 20px;
+}
+
+.nasa-project-title p {
+    font-family: century-gothic, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.4rem;
+    margin: 0;
+    padding: 0;
+}
+
+.subtitle {
+    font-family: century-gothic, sans-serif;
+    font-size: 1.6rem;
+}
+
+.scroll-container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: scroll;
+    width: 100%;
+    height: 25vh;
+    padding: 10px;
+    margin-top: 3vh;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+}
+
+.item {
+    background-color: #fbfbfb;
+    flex: 0 0 200px;
+    height: 100%;
+    margin-right: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    min-width: 200px;
+}
+
+.item .number {
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 2vh;
+}
+
+.green {
+    background-color: #228b22;
+}
+
+.orange {
+    background-color: #e67e22;
+}
+
+.red {
+    background-color: #cc0000;
+}
+
+.item .coordinates {
+    font-size: 1rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.item .location {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    color: black;
+    display: block; 
+    padding: 10px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.item .location p {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-left: 5px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.item .coordinates .icon {
+    margin-right: 5px;
+}
+
+.item .date {
+    font-size: 1rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.item .date .icon {
+    margin-right: 5px;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+#map {
+    width: 100%;
+    height: 52vh;
+    margin-top: 4vh;
+}
+
+@media (max-width: 768px) {
+    .title-container {
+        flex-direction: column;  
+        align-items: center;     
+        text-align: center;      
+    }
+
+    .logo {
+        width: 70px; 
+        margin-bottom: 10px;
+    }
+
+    .nasa-project-title p {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .scroll-container {
+        padding-left: 10px;
+        height: 28vh;
+        overflow-x: scroll;
+    }
+
+    .item {
+        height: 100%;
+        flex: 0 0 55%;
+        margin-right: 10px;
+        min-width: 55%;
+    }
+    #map {
+        width: 100%;
+        height: 45vh;
+        margin-top: 2vh;
+    }
+}
+
+@media (max-height: 700px) {
+    .title-container {
+        flex-direction: column;  
+        align-items: center;     
+        text-align: center;      
+    }
+
+    .logo {
+        width: 70px; 
+        margin-bottom: 10px;
+    }
+
+    .nasa-project-title p {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .scroll-container {
+        padding-left: 10px;
+        height: 33vh;
+        overflow-x: scroll;
+    }
+
+    .item {
+        height: 100%;
+        flex: 0 0 55%;
+        margin-right: 10px;
+        min-width: 55%;
+    }
+
+}
+
+
+

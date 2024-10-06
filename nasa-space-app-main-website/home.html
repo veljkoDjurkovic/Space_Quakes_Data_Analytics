@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
+    <link rel="stylesheet" href="styles_home.css">
+    <script src="home_js.js"></script>
+    <title>NASA Space App</title>
+</head>
+<body>
+
+    <div class="nasa-project-title">
+        <div class="title-container">
+            <img src="images/logo11.png" alt="NASA Logo" class="logo">
+            <div>
+                <p>AstroNutzz <span class="icon">🥜</span>  <br>
+                    <div class="subtitle"> NASA Space Apps Challenge </div>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="background">
+    </div>
+    
+        <div class="items">
+            <button class="item" onclick="toggleContent('about')">About Us</button>
+            <div id="about" class="content hidden"> 
+                Our team, made up of Veljko Djurković, Budrak Predrag, and Nikola Lukić, is a group of passionate Electrical Engineering master students driven by a shared love for innovation and problem-solving. We are constantly seeking opportunities to expand our knowledge, refine our skills, and push the frontiers of technology. With a diverse set of technical competencies and a collaborative spirit, we are always eager to take on new challenges that allow us to grow both individually and as a team. United by a vision to contribute meaningfully to the world of science and technology, we strive to turn ideas into impactful solutions that can make a difference.         
+            </div>
+            <button class="item" onclick="toggleContent('challenge')">Challenge</button>
+            <div id="challenge" class="content hidden"> 
+                
+<p>Our challenge is to develop a computer program capable of analyzing real seismic data from the Apollo missions and the Mars InSight Lander to identify seismic quakes hidden within the noisy recordings. In planetary seismology, missions often struggle with the power requirements needed to send continuous, high-resolution seismic data back to Earth. Since transmitting large amounts of data over vast distances requires significant energy, only a fraction of the collected data is typically scientifically valuable. This makes it crucial to devise a method that can distinguish between useful signals and noise, allowing only important seismic data to be transmitted.</p>
+
+<p>Our initial approach focused on using machine learning models and pattern recognition techniques. However, we quickly realized that there was not enough data to support this strategy due to the differences in the seismic characteristics between Earth, the Moon, and Mars. With varying frequencies and velocities between these planetary bodies, a direct application of AI models proved unfeasible. Thus, we pivoted towards a more traditional approach involving signal processing.</p>
+
+<p>Our solution involves the following steps:</p>
+
+<ul>
+    <li><strong>Data Loading and Filtering:</strong> We begin by loading the raw seismic data and applying a bandpass filter to isolate the frequencies of interest.</li>
+    <li><strong>Signal Energy Analysis:</strong> To get a clearer view of potential events, we calculate the Root Mean Square (RMS) of the filtered data, which gives us an understanding of the energy distribution.</li>
+    <li><strong>Event Detection Using Triggers:</strong> We define trigger_on and trigger_off thresholds to detect the start and end of seismic events. Initially, these thresholds are set to static values, but we also incorporate adaptive dynamic triggers if the initial settings do not effectively capture the quakes.</li>
+    <li><strong>Impulse Noise Mitigation:</strong> To avoid picking up unwanted spikes or false positives, we implemented logic to filter out impulse spikes that slip through the bandpass filter.</li>
+    <li><strong>Visualization:</strong> Finally, we plot various graphs to visually confirm the detection process:</li>
+    <ul>
+        <li>Raw seismic data</li>
+        <li>Filtered seismic data</li>
+        <li>RMS energy with defined thresholds</li>
+        <li>Raw data overlaid with detected triggers.</li>
+    </ul>
+</ul>
+
+<p>This approach has allowed us to efficiently navigate the complexities of planetary seismic data, where low signal-to-noise ratios and unique noise patterns present significant challenges. While our strategy relies on signal processing, we’re continually refining our method to improve its robustness and adaptability to new datasets.</p>
+
+            </div>
+            <button class="item" onclick="toggleContent('data')">Data Analytics</button>
+            <div id="data" class="content hidden">
+                <p><strong>Mars Data Analytics:</strong></p>
+                <img src="images/mars_data_analytics.png" class="data_image">
+                <br>
+                <p><strong>Moon Data Analytics:</strong></p>
+                <img src="images/moon_data_analytics.png" class="data_image">
+                <br>
+                <p><strong>First Plot (Light Blue - Raw Seismic Data):</strong></p>
+                <p>The top plot shows the raw seismic signal as received directly from the seismic station. This unprocessed data can contain a lot of noise and undesired frequencies, making it hard to discern seismic events from random fluctuations. Peaks in this graph may indicate potential quakes or simply be noise spikes.</p>
+                
+                <p><strong>Second Plot (Orange - Filtered Seismic Data):</strong></p>
+                <p>The second plot displays the filtered version of the same seismic data using a bandpass filter. This process retains only the frequencies of interest and eliminates unwanted noise. The filtered data is typically cleaner and more focused, making it easier to identify patterns that correspond to actual seismic events.</p>
+                
+                <p><strong>Third Plot (Green - RMS Energy with Trigger Thresholds):</strong></p>
+                <p>The third plot shows the RMS (Root Mean Square) energy of the filtered seismic data. This is a measure of the signal’s power over time. The red dashed line represents the trigger-on threshold, and the purple dashed line represents the trigger-off threshold. Whenever the RMS energy surpasses the trigger-on threshold, it indicates the potential start of a seismic event. Conversely, when the RMS energy drops below the trigger-off threshold, it marks the end of that event.</p>
+                
+                <p><strong>Fourth Plot (Light Blue with Trigger Markers - Raw Seismic Data with Event Indicators):</strong></p>
+                <p>The bottom plot shows the same raw seismic data from the first plot, but with trigger markers overlaid. The red vertical lines indicate the Trigger ON points, marking the beginning of detected seismic events, and the purple vertical lines indicate Trigger OFF points, marking the end of the events. This allows us to visually confirm where in the raw data the quakes are occurring.</p>
+                
+                <p>Overall, this multi-step visualization helps in understanding how raw seismic signals are processed and how seismic events are identified based on RMS energy and dynamically set thresholds.</p>
+                
+            </div>
+            <a href="mars.html"><button class="item" onclick="toggleContent('mars')">Mars</button></a>
+            <a href="moon.html"><button class="item" onclick="toggleContent('moon')">Moon</button></a>
+            <button class="item" onclick="toggleContent('contact')">Contact</button>
+            <div id="contact" class="content hidden">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/veljko-đurković-992210283/">Veljko Djurković</a> &nbsp; 📨 veljkodj2001@gmail.com</li>
+                    <li><a href="https://me.linkedin.com/in/predrag-budrak-b617451b4">Budrak Predrag</a> &nbsp; 📨 pbudrak@gmail.com</li>
+                    <li><a href="https://www.linkedin.com/in/nikola-lukić-99214231a/">Nikola Lukić</a> &nbsp; 📨 lukicnikola2001@gmail.com</li>
+                    
+                </ul>
+            </div>
+        </div>
+
+       <br><br><br>
+ 
+</body>
+</html>
