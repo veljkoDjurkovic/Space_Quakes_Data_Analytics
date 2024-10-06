@@ -1,0 +1,37 @@
+Project Overview
+
+This project processes seismic data from NASA’s Apollo missions and Mars Rover, analyzing Moon and Mars seismic activities, and displays the results on a website.
+
+Folder Structure and Files
+
+    Website Folder:
+        Contains HTML, CSS, JS files, images, and a 3D Mars model.
+        Includes Python scripts:
+            app.py: Analyzes and processes seismic data from NASA Apollo missions and posts them into the moon table.
+            app_mars.py: Analyzes and processes seismic data from Mars Rover missions and posts them into the mars table.
+            app_get.py: Retrieves all data from the database and displays it on the website.
+
+    Data:
+        Seismic data is sourced from NASA's sensors. Download the data on link: https://www.spaceappschallenge.org/nasa-space-apps-2024/challenges/seismic-detection-across-the-solar-system/?tab=resources 
+ under the “Space Apps 2024 Seismic Detection Data Packet.”
+
+    Steps to Set Up:
+        Database Setup: Create a NASA database with two tables, mars and moon. Both tables have the following columns:
+            id (int, primary key)
+            latitude (double)
+            longitude (double)
+            station (varchar(50))
+            magnitude (double)
+            date (varchar(20))
+            trigger_on (double)
+            trigger_off (double)
+        Loading Data:
+            Run the app.py and app_mars.py scripts to load seismic data into the tables (remember to update file paths to the seismic data in scripts).
+        Launching the Website:
+            Start the app_get.py script to display data on the website. The site shows how filtering seismic data works, detailed information on seismic activities, and visualizes the data on maps for both the Moon and Mars.
+
+    Data Analytics:
+        The Data_Analytics folder contains plots and catalogs of processed data. This demonstrates how quakes are captured and noise is reduced using filters, highlighting the efficiency of our algorithm. Notably, the algorithm works without the need for AI or extensive training data. Since there isn't much seismic data available for Mars and Moon quakes, our algorithm demonstrates significantly better results compared to AI-trained models using the same limited dataset.
+
+    Seismic Analysis:
+        The main_directory folder contains Python scripts for analyzing seismic data from Mars and the Moon. These scripts showcase quake detection and noise reduction, providing insight into the algorithm’s functionality (remember to update file paths to the seismic data in scripts).
